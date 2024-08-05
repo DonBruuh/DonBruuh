@@ -1,0 +1,17 @@
+def check_word_length():
+    # Prompt the user to enter a word
+    word = input("Escribe una palabra: ")
+    
+    # Determine the length of the entered word
+    length = len(word)
+    
+    # Check the length of the word and print the appropriate message
+    if 4 <= length <= 8:
+        print("la palabra es correcta.")
+    elif length < 4:
+        print(f"Hacen falta letras. It only has {length} letters.")
+    elif length > 8:
+        print(f"Sobran letras. It has {length} letters.")
+
+# Call the function to execute the program
+check_word_length()
