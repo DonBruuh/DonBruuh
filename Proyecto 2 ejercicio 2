@@ -1,0 +1,26 @@
+def determine_quadrant(x, y):
+    if x == 0 or y == 0:
+        return "Las cordenadas no debrian ser 0"
+    elif x > 0 and y > 0:
+        return "El punto se encuentra en el cuadrante I"
+    elif x < 0 and y > 0:
+        return "El punto se encuentra en el cuadrante II"
+    elif x < 0 and y < 0:
+        return "El punto se encuentra en el cuadrante III"
+    elif x > 0 and y < 0:
+        return "El punto se encuentra en el cuadrante IV"
+
+def main():
+    try:
+        # Prompt the user to enter coordinates
+        x = float(input("Ingresa el valor de X: "))
+        y = float(input("Ingresa el valor de Y: "))
+        
+        # Determine and print the quadrant
+        result = determine_quadrant(x, y)
+        print(result)
+    except ValueError:
+        print("Porfavor ingrese valores numericos para ubicar las cordenadas.")
+
+# Call the main function to execute the program
+main()
